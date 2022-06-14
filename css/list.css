@@ -1,0 +1,158 @@
+.header {
+    position: relative;
+}
+
+.header .second_kill {
+    position: absolute;
+    top: 40px;
+    left: 190px;
+    width: 71px;
+    height: 32px;
+    line-height: 32px;
+    border-left: 2px solid #c81523;
+    padding-left: 14px;
+}
+
+.nav .navitems a:nth-child(-n+3) {
+    padding: 0 28px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.nav .navitems a:nth-child(n+4) {
+    padding: 0 20px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.nav .navitems a:nth-child(12)::after {
+    content: "\e91e";
+    font-family: "icomoon";
+}
+
+/* banner背景模块 */
+body {
+    position: relative;
+}
+
+.banner_bj {
+    position: absolute;
+    top: 112px;
+    left: 50%;
+    margin-left: -600px;
+    height: 251px;
+    background-image: url(../images/banner_bj.png);
+    z-index: -1;
+}
+
+/* banner模块 */
+
+.banner img {
+    height: 120px;
+}
+
+/* 列表模块 */
+.list_item {
+    margin-top: 25px;
+    margin-bottom: 200px;
+}
+
+.list_item ul li {
+    float: left;
+    margin-right: 16px;
+    margin-bottom: 20px;
+    width: 288px;
+    height: 463px;
+    border: 1px solid transparent;
+}
+
+.list_item ul li:hover {
+    border: 1px solid #b1191a;
+}
+
+.list_item ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+
+
+.list_item li .photo {
+    width: 288px;
+    height: 288px;
+}
+
+.list_item li .photo img {
+    margin: 20px 80px;
+    width: 126px;
+    height: 251px;
+}
+
+.list_item .info {
+    margin-bottom: 14px;
+    width: 288px;
+    line-height: 20px;
+    padding: 0px 15px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.price {
+    padding-left: 15px;
+    width: 286px;
+    height: 30px;
+}
+
+.price span:first-child {
+    margin-right: 8px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #e60012;
+}
+
+.price span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a4a4a4;
+    text-decoration: line-through;
+}
+
+.number {
+    margin: 10px 0;
+    width: 288px;
+    padding-left: 14px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.number .bar {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 4px 0;
+    width: 130px;
+    height: 12px;
+    border: 1px solid #ed282e;
+    border-radius: 5px;
+}
+
+.number .bar .red_space {
+    width: 112px;
+    height: 10px;
+    background-color: #ed282e;
+    transition: all .5s;
+}
+
+.number .bar .red_space:hover {
+    width: 128px;
+}
+
+.qg {
+    height: 50px;
+    background-color: #b1191a;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}

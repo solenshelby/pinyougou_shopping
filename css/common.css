@@ -1,0 +1,387 @@
+/* 字体图标字体声明 记得看当前路径的变化 这里似乎绝对路径行不通，只能使用相对路径*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tomleg');
+    src: url('../fonts/icomoon.eot?tomleg#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?tomleg') format('truetype'),
+        url('../fonts/icomoon.woff?tomleg') format('woff'),
+        url('../fonts/icomoon.svg?tomleg#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+/* 版心宽度统一 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style_red {
+    color: #c81623;
+}
+
+/* 快捷导航模块 shortcut start*/
+.shortcut {
+    height: 31px;
+    line-height: 31px;
+    background-color: #f1f1f1;
+}
+
+.shortcut .w ul li {
+    float: left;
+    font-size: 12px;
+}
+
+/* 选择偶数的li 也可以是even */
+.shortcut .w .fr ul li:nth-child(2n) {
+    margin: 9px 15px 0;
+    width: 1px;
+    height: 13px;
+    background-color: #666;
+}
+
+/* 使用伪元素选择器加字体图标 */
+.shortcut .w .fr ul li .arrow_icon::after {
+    margin-left: 10px;
+    content: "\e91e";
+    font-family: 'icomoon';
+}
+
+/* 快捷导航模块 shortcut end*/
+
+/* hearder 头部模块制作 start */
+.header {
+    position: relative;
+    height: 105px;
+}
+
+/* logo的做法需要符合SEO优化 */
+.logo {
+    position: absolute;
+    top: 24px;
+    left: 3px;
+    width: 171px;
+    height: 60px;
+}
+
+.header .logo h1 a {
+    display: block;
+    width: 171px;
+    height: 60px;
+    background: url(../images/logo.png) no-repeat;
+    /* font-size:0; 京东的做法 */
+    text-indent: -10000px;
+    overflow: hidden;
+}
+
+.header .search {
+    position: absolute;
+    top: 25px;
+    left: 345px;
+    width: 536px;
+    height: 36px;
+    border: 2px solid #b1191a;
+}
+
+.header .search input {
+    float: left;
+    width: 452px;
+    height: 32px;
+    padding-left: 10px;
+}
+
+.header .search button {
+    float: left;
+    width: 80px;
+    height: 32px;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+}
+
+.header .hotwords {
+    position: absolute;
+    top: 69px;
+    left: 345px;
+}
+
+.header .hotwords a {
+    margin: 0px 10px;
+    font-size: 12px;
+}
+
+.header .shopcar {
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    width: 140px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border: 1px solid #dfdfdf;
+    background-color: #f7f7f7;
+}
+
+.header .shopcar::before {
+    content: "\e93a";
+    font-family: 'icomoon';
+}
+
+.header .shopcar::after {
+    content: "\e920";
+    font-family: 'icomoon';
+}
+
+.header .shopcar a {
+    margin: 0px 5px;
+}
+
+.header .shopcar .count {
+    position: absolute;
+    top: -8px;
+    left: 100px;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 5px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #e60012;
+    border-radius: 8px 8px 8px 0;
+}
+
+/* hearder 头部模块制作 end */
+/* nav 导航模块制作 start */
+.nav {
+    height: 48px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.nav .dropdown {
+    position: relative;
+    float: left;
+    width: 210px;
+    height: 47px;
+    background-color: #b1191a;
+}
+
+.dropdown dt {
+    margin-bottom: 2px;
+    width: 210px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* 以后应该在结构上将所有dd用一个大盒子包起来 更好的控制下面的样式 */
+/* .dropdown dd {
+    display: block;
+    padding-left: 10px;
+    width: 208px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #c81623;
+    color: #fff;
+}
+
+.dropdown dd::after {
+    position: absolute;
+    right: 10px;
+    content: "\e920";
+    font-family: 'icomoon';
+    color: #fff;
+}
+
+.dropdown dd:hover {
+    background-color: #fff;
+    margin-left: 2px;
+}
+
+.dropdown a {
+    color: #fff;
+} 
+.dropdown dd:hover a {
+    color: #c81623;
+}
+*/
+
+/* 重写dropdown下的dd模块 */
+.nav .dropdown dd {
+    display: block;
+    width: 210px;
+    height: 465px;
+    background-color: #c81623;
+}
+
+.nav .dropdown dd li {
+    padding-left: 10px;
+    width: 210px;
+    height: 31px;
+    line-height: 31px;
+    font-size: 14px;
+}
+
+.nav .dropdown dd li::after {
+    position: absolute;
+    right: 10px;
+    content: "\e920";
+    font-family: 'icomoon';
+    color: #fff;
+}
+
+.nav .dropdown dd li a {
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav .dropdown dd li:hover {
+    background-color: #fff;
+    margin-left: 2px;
+}
+
+.nav .dropdown dd li:hover a {
+    color: #c81623;
+}
+
+.nav .navitems {
+    float: left;
+    padding-left: 15px;
+    height: 46px;
+    line-height: 46px;
+
+}
+
+.nav .navitems a {
+    float: left;
+    font-size: 16px;
+    color: #333333;
+    padding: 0 24px;
+}
+
+/* nav 导航模块制作 end */
+
+/* footer 底部模块制作 start */
+.footer {
+    display: block;
+    height: 416px;
+    background-color: #f5f5f5;
+}
+
+.footer .mod_service {
+    padding: 30px 0;
+    height: 111px;
+    border-bottom: 1px solid #ededed;
+}
+
+.mod_service li {
+    float: left;
+    padding-left: 35px;
+    width: 240px;
+    height: 50px;
+}
+
+.footer .mod_service li .service_icon {
+    float: left;
+    margin-right: 6px;
+    width: 50px;
+    height: 50px;
+}
+
+/* 这里关于结构伪类选择器的时候需要再明确具体的用法 */
+.footer ul li:nth-of-type(1) .service_icon {
+    background: url(../images/icons.png) -252px -2px no-repeat;
+}
+
+.footer ul li:nth-of-type(2) .service_icon {
+    background: url(../images/icons.png) -254px -53px no-repeat;
+}
+
+.footer ul li:nth-of-type(3) .service_icon {
+    background: url(../images/icons.png) -256px -106px no-repeat;
+}
+
+.footer ul li:nth-of-type(4) .service_icon {
+    background: url(../images/icons.png) -258px -156px no-repeat;
+}
+
+.footer ul li:nth-of-type(5) .service_icon {
+    background: url(../images/icons.png) -257px -209px no-repeat;
+}
+
+.service_txt {
+    padding-top: 6px;
+    font-size: 12px;
+}
+
+.service_txt h3 {
+    font-size: 14px;
+}
+
+.mod_help {
+    height: 190px;
+    border-bottom: 1px solid #ededed;
+    margin-top: 20px;
+
+}
+
+.mod_help dl {
+    float: left;
+    width: 200px;
+    height: 190px;
+    padding-left: 52px;
+}
+
+.mod_help dt {
+    height: 30px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.mod_help dd {
+    height: 20px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.mod_help dl:nth-of-type(6) p {
+    margin-left: -6px;
+}
+
+.mod_help dl:nth-of-type(6) .QR_code {
+    margin-left: -13px;
+    width: 100px;
+    height: 100px;
+    background: url(../images/wx_cz.jpg) no-repeat;
+}
+
+.mod_copyright {
+    text-align: center;
+}
+
+.mod_copyright .links {
+    padding: 20px 0 15px;
+    height: 45px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.mod_copyright a {
+    padding: 0 15px;
+}
+
+.mod_copyright p {
+    line-height: 20px;
+}
+
+/* footer 底部模块制作 end  */
+
